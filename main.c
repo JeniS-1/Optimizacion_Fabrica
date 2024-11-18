@@ -23,13 +23,11 @@ int main() {
         }
         num_ingresados = 0;
 
-        printf("\n--- Ingreso de Productos ---\n");
+        printf("\nIngreso de Productos\n");
         for (int i = 0; i < NumProduct; i++) {
             printf("\nProducto %d de %d:\n", i + 1, NumProduct);
-            ingresarProducto(productos[i], &tiempos[i], &recursos[i], &cantidades_demandadas[i],
-                             &tiempos_disponibles[i], &recursos_disponibles[i]);
-            evaluarProduccionIndividual(productos[i], tiempos[i], recursos[i], cantidades_demandadas[i],
-                                        tiempos_disponibles[i], recursos_disponibles[i], &cantidades_producidas[i]);
+            ingresarProducto(productos[i], &tiempos[i], &recursos[i], &cantidades_demandadas[i],&tiempos_disponibles[i], &recursos_disponibles[i]);
+            evaluarProduccionIndividual(productos[i], tiempos[i], recursos[i], cantidades_demandadas[i], tiempos_disponibles[i], recursos_disponibles[i], &cantidades_producidas[i]);
             num_ingresados++;
         }
 
@@ -40,8 +38,7 @@ int main() {
                     mostrarInventario(productos, tiempos, recursos, cantidades_producidas, num_ingresados);
                     break;
                 case 2:
-                    buscarProducto(productos, tiempos, recursos, cantidades_demandadas,
-                                   tiempos_disponibles, recursos_disponibles, cantidades_producidas, &num_ingresados);
+                    buscarProducto(productos, tiempos, recursos, cantidades_demandadas, tiempos_disponibles, recursos_disponibles, cantidades_producidas, &num_ingresados);
                     break;
                 case 3: {
                     printf("\n¿Desea ingresar 5 productos nuevos? (1: Si, 0: No): ");
