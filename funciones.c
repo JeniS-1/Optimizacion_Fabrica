@@ -128,7 +128,7 @@ void hacerPedido(char nombres_productos[NumProduct][30], float tiempos_por_unida
             getchar();
 
             for (int j = 0; j < num_recursos[i]; j++) {
-                printf("Cantidad disponible de %s: ", nombres_recursos[i][j]);
+                printf("Cantidad disponible de %s en la fabrica: ", nombres_recursos[i][j]);
                 scanf("%f", &recursos_disponibles[j]);
                 getchar();
             }
