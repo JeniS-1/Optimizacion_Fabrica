@@ -2,7 +2,7 @@
 #include <string.h>
 #include "funciones.h"
 
-int menu() {
+int menu(int argc, char *argv[]) {
     int opcion;
     printf("\n MENU \n");
     printf("1. Ingresar productos\n");
